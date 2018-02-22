@@ -41,13 +41,16 @@ public class BallDemo
         for(int i =0;i < numberOfBalls; i++){
             
             int radio = aleatorio.nextInt(20) + 5;
+            
             int red = aleatorio.nextInt(256);
             int green = aleatorio.nextInt(256);
             int blue = aleatorio.nextInt(256);
             
             Color color = new Color(red,green,blue);
             
-            BouncingBall ball = new BouncingBall(50+(30*i),50,radio,color, ground,myCanvas);
+            int posX = aleatorio.nextInt(300);
+            
+            BouncingBall ball = new BouncingBall(posX,50,radio,color,ground,myCanvas);
             ball.draw();
             myBalls[i] = ball;
         }
